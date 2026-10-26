@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kundali Explorer — an interactive guide to the twelve bhavas, built for the community.">
+  <meta name="theme-color" content="#6f2338">
+  <title>Kundali Explorer — 12 Bhāvas</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="data/houses.js" defer></script>
+  <script src="js/app.min.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-mark" aria-hidden="true">१२</div>
+      <div>
+        <p class="eyebrow">Interactive Jyotish Reference</p>
+        <h1>Kundali Explorer</h1>
+        <p class="subtitle">Explore the twelve bhāvas, one house at a time.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro-card">
+      <div>
+        <p class="eyebrow">Start exploring</p>
+        <h2>Select a house in the chart</h2>
+        <p>Choose any house to read its general meaning, detailed topics, comparisons and study checklists from the supplied reference document.</p>
+      </div>
+      <label class="search-wrap">
+        <span>Search house content</span>
+        <input id="searchInput" type="search" placeholder="Try: savings, career, गुरु…" autocomplete="off">
+      </label>
+    </section>
+
+    <section class="explorer-layout" aria-label="Kundali houses and details">
+      <div class="chart-card">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">Bhāva chart</p>
+            <h2>12 Houses</h2>
+          </div>
+          <span class="small-note">Select a number</span>
+        </div>
+        <div id="houseGrid" class="house-grid" aria-label="Select a bhava"></div>
+        <p class="chart-caption">This is a learning/reference chart. The house numbers are fixed for navigation; this is not a personalized birth chart.</p>
+      </div>
+
+      <article id="detailsPanel" class="details-card" aria-live="polite">
+        <div class="empty-state">
+          <span class="empty-icon" aria-hidden="true">✦</span>
+          <h2>Choose a bhāva</h2>
+          <p>House details will appear here.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="general-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Study overview</p>
+          <h2>General Bhāva Reference</h2>
+        </div>
+        <p>Core meanings, house progression and traditional classifications.</p>
+      </div>
+      <div id="generalContent" class="general-content"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-title">Created for the community ❤️</p>
+    <p>If you liked this software, buy me a coffee.</p>
+    <p>© 2026 Swapnil Karambelkar</p>
+    <p>Reuse permitted under the Kundali Explorer Attribution License. Please retain the required credit.</p>
+    <p class="footer-small">Educational reference only. Astrological associations are presented as study material, not as medical, financial or other professional advice.</p>
+  </footer>
+</body>
+</html>
